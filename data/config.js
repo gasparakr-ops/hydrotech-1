@@ -11,7 +11,7 @@ window.HYDROTECH_CONFIG = {
   adres: "ul. Warszawska 24, 31-155 Kraków",
 
   // UZUPEŁNIJ: dane kontaktowe koła
-  email: "hydrotech@example.com",
+  email: "hydrotech.edu.pk@gmail.com",
   facebook: "",   // np. "https://www.facebook.com/twoja-strona"
   instagram: "",  // np. "https://www.instagram.com/twoj-profil"
   opiekun: "",    // np. "dr inż. Jan Kowalski"
