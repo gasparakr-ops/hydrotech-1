@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HYDROTECH – Koło Naukowe | Politechnika Krakowska</title>
+  <meta name="description" content="Koło Naukowe HYDROTECH, Wydział Inżynierii Środowiska i Energetyki Politechniki Krakowskiej. Fotoreportaże z zapór, jazów, śluz i elektrowni wodnych.">
+  <meta name="theme-color" content="#02356f">
+  <meta property="og:title" content="HYDROTECH – fotoreportaże z obiektów hydrotechnicznych">
+  <meta property="og:description" content="Koło Naukowe HYDROTECH, Politechnika Krakowska – Wydział Inżynierii Środowiska i Energetyki.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#tresc">Przejdź do treści</a>
+
+  <!-- Pasek górny -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__links">
+        <a href="https://www.pk.edu.pl/" target="_blank" rel="noopener">Politechnika Krakowska</a>
+        <a href="https://wisie.pk.edu.pl/" target="_blank" rel="noopener">Wydział Inżynierii Środowiska i Energetyki</a>
+      </div>
+      <div class="topbar__links topbar__right">
+        <a href="#dolacz">Kontakt</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nagłówek -->
+  <header class="header">
+    <div class="container">
+      <a class="brand" href="./" aria-label="HYDROTECH – strona główna">
+        <img class="brand__faculty" src="assets/img/logo-wisie.svg" alt="Politechnika Krakowska – Wydział Inżynierii Środowiska i Energetyki" width="294" height="72">
+        <span class="brand__divider" aria-hidden="true"></span>
+        <span class="brand__club">
+          <img class="brand__mark" src="assets/img/hydrotech-znak.svg" alt="" width="40" height="40">
+          <span class="brand__text">
+            <span class="brand__name">HYDROTECH</span>
+            <span class="brand__sub">Koło Naukowe · PK</span>
+          </span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menu" data-icon="menu"></button>
+      <nav class="nav" id="nav" aria-label="Główna nawigacja">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#reportaze">Fotoreportaże</a></li>
+          <li><a class="nav__link" href="#mapa">Mapa obiektów</a></li>
+          <li><a class="nav__link" href="#o-kole">O kole</a></li>
+          <li><a class="nav__link" href="#slowniczek">Słowniczek</a></li>
+          <li><a class="nav__link" href="#dolacz">Dołącz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="tresc">
+    <!-- Hero z interaktywnym przekrojem zapory -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div>
+          <span class="eyebrow">Koło Naukowe HYDROTECH</span>
+          <h1 id="hero-title">Fotoreportaże z&nbsp;obiektów <em>hydrotechnicznych</em></h1>
+          <p class="hero__lead">Zapory, jazy, śluzy i elektrownie wodne widziane oczami studentów Wydziału Inżynierii Środowiska i Energetyki Politechniki Krakowskiej.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#reportaze" data-icon="camera">Przeglądaj reportaże</a>
+            <a class="btn btn--ghost" href="#mapa" data-icon="pin">Mapa obiektów</a>
+          </div>
+        </div>
+
+        <div class="xsec">
+          <div class="xsec__caption"><span>Przekrój zapory ciężkiej</span><span>schemat poglądowy</span></div>
+          <div class="xsec__stage">
+            <svg class="xsec__svg" viewBox="0 0 600 400" role="img" aria-label="Schemat przekroju betonowej zapory ciężkiej z zaznaczonymi elementami">
+              <defs>
+                <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="10" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+                </pattern>
+                <clipPath id="clip-up"><polygon points="0,100 257,100 250,330 0,330"/></clipPath>
+                <clipPath id="clip-down"><polygon points="421,300 600,300 600,330 440,330"/></clipPath>
+                <linearGradient id="gw" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#2b8fd0" stop-opacity=".75"/>
+                  <stop offset="1" stop-color="#006faa" stop-opacity=".35"/>
+                </linearGradient>
+              </defs>
+              <!-- podłoże -->
+              <rect x="0" y="330" width="600" height="70" fill="url(#hatch)"/>
+              <line x1="0" y1="330" x2="600" y2="330" stroke="#d7e9ff" stroke-width="2"/>
+              <!-- woda górna -->
+              <g clip-path="url(#clip-up)">
+                <rect x="0" y="100" width="260" height="230" fill="url(#gw)"/>
+                <path class="wave" d="M0 104 q15 -6 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 V112 H0Z" fill="rgba(255,255,255,.25)"/>
+                <path class="wave wave--slow" d="M0 160 q15 -4 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="2"/>
+                <path class="wave" d="M0 230 q15 -4 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="2"/>
+              </g>
+              <line x1="0" y1="100" x2="257" y2="100" stroke="#9cc9ec" stroke-width="1.5"/>
+              <!-- woda dolna -->
+              <g clip-path="url(#clip-down)">
+                <rect x="420" y="300" width="180" height="30" fill="url(#gw)"/>
+                <path class="wave" d="M420 302 q15 -4 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 V308 H420Z" fill="rgba(255,255,255,.25)"/>
+              </g>
+              <line x1="421" y1="300" x2="600" y2="300" stroke="#9cc9ec" stroke-width="1.5"/>
+              <!-- korpus zapory -->
+              <polygon points="250,330 258,70 292,70 296,96 440,330" fill="rgba(215,233,255,.16)" stroke="#d7e9ff" stroke-width="2.5" stroke-linejoin="round"/>
+              <rect x="254" y="62" width="42" height="8" fill="#d7e9ff" opacity=".85"/>
+              <!-- galeria kontrolna -->
+              <path d="M280 262 v-12 a9 9 0 0 1 18 0 v12z" fill="#012042" stroke="#d7e9ff" stroke-width="1.5"/>
+              <!-- upust denny -->
+              <rect x="251" y="312" width="183" height="9" fill="#012042" stroke="#d7e9ff" stroke-width="1.2"/>
+              <rect x="268" y="306" width="6" height="21" fill="#f49b05"/>
+              <!-- przesłona przeciwfiltracyjna -->
+              <g stroke="#f49b05" stroke-width="2" stroke-dasharray="5 5">
+                <line x1="256" y1="332" x2="256" y2="396"/>
+                <line x1="262" y1="332" x2="262" y2="390"/>
+              </g>
+              <!-- wymiar wysokości -->
+              <g stroke="#9cc9ec" stroke-width="1" fill="none">
+                <line x1="470" y1="70" x2="470" y2="330"/>
+                <line x1="300" y1="70" x2="478" y2="70" stroke-dasharray="3 4"/>
+                <line x1="464" y1="70" x2="476" y2="70"/>
+                <line x1="464" y1="330" x2="476" y2="330"/>
+              </g>
+              <text x="480" y="205" fill="#9cc9ec" font-size="14" font-family="Work Sans, sans-serif" font-style="italic">H</text>
+              <!-- oznaczenia -->
+              <g font-family="Work Sans, sans-serif" fill="#d7e9ff">
+                <path d="M30 86 h14 l-7 10z" fill="#d7e9ff"/>
+                <text x="50" y="95" font-size="13" font-weight="600">NPP</text>
+                <text x="40" y="280" font-size="11" letter-spacing="2" fill="#bfe0f7">WODA GÓRNA</text>
+                <text x="500" y="290" font-size="11" letter-spacing="2" fill="#bfe0f7">WODA DOLNA</text>
+                <path d="M520 266 h12 l-6 9z" fill="#d7e9ff"/>
+                <text x="20" y="372" font-size="11" letter-spacing="2" fill="#9cc9ec">PODŁOŻE</text>
+              </g>
+            </svg>
+          </div>
+          <p class="xsec__hint">Kliknij lub najedź na punkty, aby poznać elementy zapory.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statystyki -->
+    <div class="stats">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat"><div class="stat__value" data-stat="reportaze">0</div><div class="stat__label">fotoreportaży</div></div>
+          <div class="stat"><div class="stat__value" data-stat="zdjecia">0</div><div class="stat__label">zdjęć w galeriach</div></div>
+          <div class="stat"><div class="stat__value" data-stat="rzeki">0</div><div class="stat__label">odwiedzonych rzek</div></div>
+          <div class="stat"><div class="stat__value" data-stat="typy">0</div><div class="stat__label">rodzajów obiektów</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fotoreportaże -->
+    <section class="section" id="reportaze" aria-labelledby="rep-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Z naszych wyjazdów</span>
+            <h2 id="rep-title">Fotoreportaże</h2>
+            <p>Każdy reportaż to relacja z wizyty na obiekcie – z opisem konstrukcji, parametrami technicznymi i galerią zdjęć.</p>
+          </div>
+        </div>
+
+        <div class="notice" id="demo-notice" hidden>
+          <p>Na stronie są <strong>przykładowe</strong> fotoreportaże z grafikami zastępczymi. Dodaj własne zdjęcia i opisy w pliku <code>data/reportaze.js</code> – instrukcja znajduje się w pliku README.</p>
+          <button type="button" aria-label="Zamknij informację">×</button>
+        </div>
+
+        <div class="toolbar">
+          <div class="toolbar__row">
+            <label class="search">
+              <span class="visually-hidden">Szukaj reportażu</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm9 16-4.3-4.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <input type="search" id="search" placeholder="Szukaj: obiekt, rzeka, miejscowość…" autocomplete="off">
+            </label>
+            <label>
+              <span class="visually-hidden">Sortuj</span>
+              <select class="select" id="sort">
+                <option value="new">Najnowsze</option>
+                <option value="old">Najstarsze</option>
+                <option value="az">Alfabetycznie</option>
+                <option value="river">Wg rzeki</option>
+              </select>
+            </label>
+          </div>
+          <div class="chips" id="chips" role="group" aria-label="Filtruj według rodzaju obiektu"></div>
+          <div class="results-info" id="results-info" aria-live="polite"></div>
+        </div>
+
+        <div class="cards" id="cards"></div>
+      </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="section section--tint" id="mapa" aria-labelledby="map-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Gdzie byliśmy</span>
+            <h2 id="map-title">Mapa obiektów</h2>
+            <p>Kliknij pinezkę, aby zobaczyć reportaż. Mapa uwzględnia filtry wybrane powyżej.</p>
+          </div>
+        </div>
+        <div class="map-layout">
+          <div class="map" id="map" role="region" aria-label="Mapa odwiedzonych obiektów"></div>
+          <aside class="map-side">
+            <h3>Legenda</h3>
+            <ul class="legend" id="legend"></ul>
+            <h3>Obiekty</h3>
+            <ul class="map-list" id="map-list"></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- O kole -->
+    <section class="section" id="o-kole" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about__text reveal">
+          <span class="eyebrow">Kim jesteśmy</span>
+          <h2 id="about-title" style="font-size:clamp(28px,3vw,38px);margin-top:10px">O kole naukowym</h2>
+          <p data-config="opis"></p>
+          <div class="features">
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M7 20V6h3l5 14M3 9h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 13c1 .8 2 .8 4 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <div><h3>Wyjazdy terenowe</h3><p>Zwiedzamy obiekty hydrotechniczne w Polsce – często z dostępem do miejsc niedostępnych dla turystów.</p></div>
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              <div><h3>Fotoreportaże</h3><p>Dokumentujemy konstrukcje, urządzenia i detale inżynierskie, a zdjęcia opisujemy językiem technicznym.</p></div>
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 20c1-3.5 3.6-5.5 6.5-5.5s5.5 2 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c1.7.8 2.9 2.6 3.5 5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <div><h3>Spotkania i seminaria</h3><p>Dzielimy się wiedzą, przygotowujemy referaty i projekty związane z budownictwem wodnym.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline reveal">
+          <h3>Kalendarium wyjazdów</h3>
+          <div id="timeline"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Słowniczek -->
+    <section class="section section--tint" id="slowniczek" aria-labelledby="gl-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Dla ciekawych</span>
+            <h2 id="gl-title">Słowniczek hydrotechniczny</h2>
+            <p>Najważniejsze pojęcia, które pojawiają się w naszych reportażach.</p>
+          </div>
+        </div>
+        <label class="search glossary-tools">
+          <span class="visually-hidden">Szukaj pojęcia</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm9 16-4.3-4.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="glossary-search" placeholder="Szukaj pojęcia, np. jaz, przelew…" autocomplete="off">
+        </label>
+        <div class="glossary" id="glossary"></div>
+      </div>
+    </section>
+
+    <!-- Dołącz -->
+    <section class="cta" id="dolacz" aria-labelledby="cta-title">
+      <div class="container">
+        <div>
+          <span class="eyebrow">Dołącz do nas</span>
+          <h2 id="cta-title">Chcesz jeździć z nami na zapory?</h2>
+          <p>Zapraszamy studentów wszystkich kierunków Politechniki Krakowskiej, którzy interesują się budownictwem wodnym, energetyką i fotografią.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--primary" href="#" data-mailto="Dołączenie do koła HYDROTECH" data-icon="mail">Napisz do nas</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Stopka -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <img class="footer__logo" src="assets/img/logo-wisie-biale.svg" alt="Wydział Inżynierii Środowiska i Energetyki" width="292" height="67">
+        <p><strong style="color:#fff" data-config="pelnaNazwa">Koło Naukowe HYDROTECH</strong><br>
+          <span data-config="uczelnia">Politechnika Krakowska im. Tadeusza Kościuszki</span><br>
+          <span data-config="adres">ul. Warszawska 24, 31-155 Kraków</span></p>
+      </div>
+      <div>
+        <h3>Na stronie</h3>
+        <ul>
+          <li><a href="#reportaze">Fotoreportaże</a></li>
+          <li><a href="#mapa">Mapa obiektów</a></li>
+          <li><a href="#o-kole">O kole</a></li>
+          <li><a href="#slowniczek">Słowniczek</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kontakt</h3>
+        <ul data-contact></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© <span data-year></span> Koło Naukowe HYDROTECH</span>
+        <span>Mapa: © współtwórcy OpenStreetMap</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/leaflet/leaflet.js"></script>
+  <script src="data/config.js"></script>
+  <script src="data/reportaze.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

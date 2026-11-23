@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fotoreportaż – HYDROTECH | Politechnika Krakowska</title>
+  <meta name="description" content="Fotoreportaż Koła Naukowego HYDROTECH z wizyty na obiekcie hydrotechnicznym.">
+  <meta name="theme-color" content="#02356f">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#tresc">Przejdź do treści</a>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__links">
+        <a href="https://www.pk.edu.pl/" target="_blank" rel="noopener">Politechnika Krakowska</a>
+        <a href="https://wisie.pk.edu.pl/" target="_blank" rel="noopener">Wydział Inżynierii Środowiska i Energetyki</a>
+      </div>
+      <div class="topbar__links topbar__right">
+        <a href="./#dolacz">Kontakt</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <a class="brand" href="./" aria-label="HYDROTECH – strona główna">
+        <img class="brand__faculty" src="assets/img/logo-wisie.svg" alt="Politechnika Krakowska – Wydział Inżynierii Środowiska i Energetyki" width="294" height="72">
+        <span class="brand__divider" aria-hidden="true"></span>
+        <span class="brand__club">
+          <img class="brand__mark" src="assets/img/hydrotech-znak.svg" alt="" width="40" height="40">
+          <span class="brand__text">
+            <span class="brand__name">HYDROTECH</span>
+            <span class="brand__sub">Koło Naukowe · PK</span>
+          </span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menu" data-icon="menu"></button>
+      <nav class="nav" id="nav" aria-label="Główna nawigacja">
+        <ul class="nav__list">
+          <li><a class="nav__link is-active" href="./#reportaze">Fotoreportaże</a></li>
+          <li><a class="nav__link" href="./#mapa">Mapa obiektów</a></li>
+          <li><a class="nav__link" href="./#o-kole">O kole</a></li>
+          <li><a class="nav__link" href="./#slowniczek">Słowniczek</a></li>
+          <li><a class="nav__link" href="./#dolacz">Dołącz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="tresc">
+    <div id="reportaz"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <img class="footer__logo" src="assets/img/logo-wisie-biale.svg" alt="Wydział Inżynierii Środowiska i Energetyki" width="292" height="67">
+        <p><strong style="color:#fff" data-config="pelnaNazwa">Koło Naukowe HYDROTECH</strong><br>
+          <span data-config="uczelnia">Politechnika Krakowska im. Tadeusza Kościuszki</span><br>
+          <span data-config="adres">ul. Warszawska 24, 31-155 Kraków</span></p>
+      </div>
+      <div>
+        <h3>Na stronie</h3>
+        <ul>
+          <li><a href="./#reportaze">Fotoreportaże</a></li>
+          <li><a href="./#mapa">Mapa obiektów</a></li>
+          <li><a href="./#o-kole">O kole</a></li>
+          <li><a href="./#slowniczek">Słowniczek</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kontakt</h3>
+        <ul data-contact></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© <span data-year></span> Koło Naukowe HYDROTECH</span>
+        <span>Mapa: © współtwórcy OpenStreetMap</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Powiększenie zdjęć -->
+  <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria zdjęć" hidden>
+    <div class="lb__top">
+      <span id="lb-count" aria-live="polite"></span>
+      <button class="lb__btn" type="button" id="lb-close" aria-label="Zamknij (Esc)" data-icon="close"></button>
+    </div>
+    <button class="lb__btn lb__prev" type="button" id="lb-prev" aria-label="Poprzednie zdjęcie" data-icon="chevronLeft"></button>
+    <figure class="lb__fig"><img class="lb__img" id="lb-img" alt=""></figure>
+    <button class="lb__btn lb__next" type="button" id="lb-next" aria-label="Następne zdjęcie" data-icon="chevronRight"></button>
+    <div class="lb__cap" id="lb-cap"></div>
+  </div>
+
+  <script src="assets/vendor/leaflet/leaflet.js"></script>
+  <script src="data/config.js"></script>
+  <script src="data/reportaze.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/reportaz.js"></script>
+</body>
+</html>
