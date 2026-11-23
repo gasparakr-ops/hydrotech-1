@@ -14,210 +14,54 @@
  * "wspolrzedne" – [szerokość, długość] geograficzna, np. skopiowane z Google Maps / OpenStreetMap
  * "data" – data wyjazdu w formacie RRRR-MM-DD
  *
- * UWAGA: poniższe reportaże są PRZYKŁADOWE (demo: true). Dane techniczne podano poglądowo –
- * przed publikacją zweryfikuj je ze źródłami (np. Wody Polskie, zarządca obiektu).
+ * "zrodla" – (opcjonalnie) lista źródeł danych technicznych: { nazwa: "...", url: "..." }
+ *
+ * UWAGA: poniższy reportaż jest PRZYKŁADOWY (demo: true) – data wyjazdu i zdjęcia są do uzupełnienia,
+ * a dane techniczne pochodzą z Wikipedii i warto je potwierdzić u zarządcy obiektu (Wody Polskie).
  */
 window.HYDROTECH_REPORTAZE = [
   {
-    id: "solina",
+    id: "stopien-kosciuszko",
     demo: true,
-    tytul: "Zapora w Solinie",
-    podtytul: "Najwyższa zapora w Polsce",
-    typy: ["zapora", "zbiornik", "elektrownia"],
-    rzeka: "San",
-    miejscowosc: "Solina",
-    wojewodztwo: "podkarpackie",
-    wspolrzedne: [49.3953, 22.4547],
-    data: "2026-05-16",
-    autorzy: ["Zespół HYDROTECH"],
-    lead:
-      "Betonowa zapora ciężka na Sanie, która tworzy Jezioro Solińskie – największy pod względem pojemności zbiornik retencyjny w Polsce.",
-    tresc: [
-      "Zapora w Solinie powstała w latach 1960–1968. Ma 81,8 m wysokości i jest najwyższą zaporą w Polsce. Przy zaporze działa elektrownia wodna, która współpracuje z położonym niżej zbiornikiem Myczkowce.",
-      "To miejsce na relację z wyjazdu: jak wyglądało zwiedzanie, które elementy obiektu udało się zobaczyć (korona, galerie kontrolne, hala maszyn), czego dowiedzieliście się od przewodnika i co było dla was najciekawsze z inżynierskiego punktu widzenia.",
-      "Możesz dodać dowolnie wiele akapitów – każdy akapit to osobny tekst w cudzysłowie, oddzielony przecinkiem."
-    ],
-    parametry: {
-      "Typ konstrukcji": "betonowa, ciężka",
-      "Wysokość": "81,8 m",
-      "Długość korony": "664,8 m",
-      "Lata budowy": "1960–1968",
-      "Pojemność zbiornika": "ok. 472 mln m³"
-    },
-    okladka: 0,
-    zdjecia: [
-      { plik: "", opis: "Widok na zaporę od strony wody dolnej" },
-      { plik: "", opis: "Korona zapory i Jezioro Solińskie" },
-      { plik: "", opis: "Galeria kontrolna wewnątrz korpusu zapory" },
-      { plik: "", opis: "Hala maszyn elektrowni wodnej" },
-      { plik: "", opis: "Urządzenia upustowe" },
-      { plik: "", opis: "Panorama zbiornika z punktu widokowego" },
-      { plik: "", opis: "Zdjęcie grupowe uczestników wyjazdu" }
-    ]
-  },
-  {
-    id: "czorsztyn-niedzica",
-    demo: true,
-    tytul: "Zapora Czorsztyn–Niedzica",
-    podtytul: "Ziemna zapora na Dunajcu i elektrownia szczytowo-pompowa",
-    typy: ["zapora", "zbiornik", "elektrownia"],
-    rzeka: "Dunajec",
-    miejscowosc: "Niedzica",
-    wojewodztwo: "małopolskie",
-    wspolrzedne: [49.4262, 20.3069],
-    data: "2026-03-21",
-    autorzy: ["Zespół HYDROTECH"],
-    lead:
-      "Zapora ziemna zamykająca Jezioro Czorsztyńskie – zbiornik o kluczowym znaczeniu dla ochrony przeciwpowodziowej doliny Dunajca.",
-    tresc: [
-      "Zapora w Niedzicy jest zaporą ziemną o wysokości 56 m, ukończoną w 1997 roku. Przy zaporze działa elektrownia wodna z członem pompowym, a poniżej znajduje się zbiornik wyrównawczy Sromowce Wyżne.",
-      "To miejsce na relację z wyjazdu – opisz trasę zwiedzania, konstrukcję korpusu ziemnego, uszczelnienie i urządzenia upustowe, które udało się zobaczyć."
-    ],
-    parametry: {
-      "Typ konstrukcji": "ziemna",
-      "Wysokość": "56 m",
-      "Długość korony": "404 m",
-      "Rok ukończenia": "1997",
-      "Funkcje": "ochrona przeciwpowodziowa, energetyka, retencja"
-    },
-    okladka: 1,
-    zdjecia: [
-      { plik: "", opis: "Skarpa odpowietrzna zapory" },
-      { plik: "", opis: "Jezioro Czorsztyńskie z korony zapory" },
-      { plik: "", opis: "Budynek elektrowni wodnej" },
-      { plik: "", opis: "Wieża upustowa" },
-      { plik: "", opis: "Zbiornik wyrównawczy Sromowce Wyżne" },
-      { plik: "", opis: "Model przekroju zapory w sali edukacyjnej" }
-    ]
-  },
-  {
-    id: "dobczyce",
-    demo: true,
-    tytul: "Zapora w Dobczycach",
-    podtytul: "Skąd Kraków bierze wodę",
-    typy: ["zapora", "zbiornik"],
-    rzeka: "Raba",
-    miejscowosc: "Dobczyce",
-    wojewodztwo: "małopolskie",
-    wspolrzedne: [49.8807, 20.0887],
-    data: "2025-11-08",
-    autorzy: ["Zespół HYDROTECH"],
-    lead:
-      "Zapora na Rabie tworząca Jezioro Dobczyckie – najważniejsze źródło wody pitnej dla Krakowa.",
-    tresc: [
-      "Zbiornik Dobczycki oddano do eksploatacji w 1986 roku. Poza zaopatrzeniem aglomeracji krakowskiej w wodę pełni funkcję przeciwpowodziową na Rabie.",
-      "To miejsce na relację z wyjazdu – np. jak chroniona jest strefa ujęcia wody, jak pracuje przelew i jakie pomiary prowadzi się na zaporze."
-    ],
-    parametry: {
-      "Typ konstrukcji": "ziemna z częścią betonową",
-      "Rok oddania": "1986",
-      "Funkcje": "zaopatrzenie w wodę, ochrona przeciwpowodziowa"
-    },
-    okladka: 0,
-    zdjecia: [
-      { plik: "", opis: "Zapora od strony wody dolnej" },
-      { plik: "", opis: "Przelew i niecka wypadowa" },
-      { plik: "", opis: "Korona zapory" },
-      { plik: "", opis: "Jezioro Dobczyckie" },
-      { plik: "", opis: "Ujęcie wody" }
-    ]
-  },
-  {
-    id: "roznow",
-    demo: true,
-    tytul: "Zapora w Rożnowie",
-    podtytul: "Przedwojenna betonowa zapora na Dunajcu",
-    typy: ["zapora", "zbiornik", "elektrownia"],
-    rzeka: "Dunajec",
-    miejscowosc: "Rożnów",
-    wojewodztwo: "małopolskie",
-    wspolrzedne: [49.7618, 20.6781],
-    data: "2025-10-18",
-    autorzy: ["Zespół HYDROTECH"],
-    lead:
-      "Betonowa zapora ciężka, której budowę rozpoczęto przed wojną – dziś zamyka Jezioro Rożnowskie.",
-    tresc: [
-      "Zapora w Rożnowie powstawała w latach 1935–1941. Razem z położonym niżej zbiornikiem Czchów tworzy zespół zbiorników na Dunajcu, a przy zaporze pracuje elektrownia wodna.",
-      "To miejsce na relację z wyjazdu – historia budowy, stan techniczny konstrukcji, zamknięcia przelewów."
-    ],
-    parametry: {
-      "Typ konstrukcji": "betonowa, ciężka",
-      "Lata budowy": "1935–1941",
-      "Zbiornik wyrównawczy": "Czchów"
-    },
-    okladka: 0,
-    zdjecia: [
-      { plik: "", opis: "Zapora i przelewy" },
-      { plik: "", opis: "Elektrownia wodna" },
-      { plik: "", opis: "Zamknięcia przelewów" },
-      { plik: "", opis: "Jezioro Rożnowskie" },
-      { plik: "", opis: "Tablica pamiątkowa z czasu budowy" },
-      { plik: "", opis: "Dolina Dunajca poniżej zapory" }
-    ]
-  },
-  {
-    id: "porabka-zar",
-    demo: true,
-    tytul: "Elektrownia Porąbka–Żar",
-    podtytul: "Elektrownia szczytowo-pompowa ukryta w górze",
-    typy: ["elektrownia", "zbiornik", "zapora"],
-    rzeka: "Soła",
-    miejscowosc: "Międzybrodzie Bialskie",
-    wojewodztwo: "śląskie",
-    wspolrzedne: [49.7957, 19.2116],
-    data: "2025-06-07",
-    autorzy: ["Zespół HYDROTECH"],
-    lead:
-      "Elektrownia szczytowo-pompowa z górnym zbiornikiem na szczycie góry Żar i podziemną halą maszyn.",
-    tresc: [
-      "Elektrownia Porąbka–Żar została uruchomiona w 1979 roku. Dolnym zbiornikiem jest Jezioro Międzybrodzkie, utworzone przez zaporę w Porąbce na Sole. Hala maszyn znajduje się w podziemnej kawernie.",
-      "To miejsce na relację z wyjazdu – zasada działania elektrowni szczytowo-pompowej, rurociągi, zbiornik górny i wrażenia z podziemnej części obiektu."
-    ],
-    parametry: {
-      "Rodzaj": "elektrownia szczytowo-pompowa",
-      "Rok uruchomienia": "1979",
-      "Moc": "ok. 500 MW",
-      "Zbiornik dolny": "Jezioro Międzybrodzkie"
-    },
-    okladka: 0,
-    zdjecia: [
-      { plik: "", opis: "Górny zbiornik na szczycie Żaru" },
-      { plik: "", opis: "Tunel dojazdowy do kawerny" },
-      { plik: "", opis: "Podziemna hala maszyn" },
-      { plik: "", opis: "Jezioro Międzybrodzkie" },
-      { plik: "", opis: "Zapora w Porąbce" }
-    ]
-  },
-  {
-    id: "stopien-dabie",
-    demo: true,
-    tytul: "Stopień Wodny Dąbie",
-    podtytul: "Jaz i śluza na Wiśle w Krakowie",
-    typy: ["jaz", "sluza"],
+    tytul: "Stopień Wodny Kościuszko",
+    podtytul: "Jaz, śluza i elektrownia na Wiśle pod mostem autostrady A4",
+    typy: ["jaz", "sluza", "elektrownia"],
     rzeka: "Wisła",
-    miejscowosc: "Kraków",
+    miejscowosc: "Kryspinów (gm. Liszki)",
     wojewodztwo: "małopolskie",
-    wspolrzedne: [50.0512, 19.9922],
-    data: "2025-04-12",
+    wspolrzedne: [50.0308, 19.8192],
+    data: "2026-10-17",
     autorzy: ["Zespół HYDROTECH"],
     lead:
-      "Stopień wodny w granicach Krakowa – piętrzy Wisłę i umożliwia żeglugę dzięki śluzie komorowej.",
+      "Stopień wodny na Wiśle tuż przy zachodniej granicy Krakowa – z jazem, śluzą komorową, przepławką dla ryb i małą elektrownią wodną.",
     tresc: [
-      "Stopień Wodny Dąbie jest jednym ze stopni kaskady górnej Wisły. Składa się z jazu piętrzącego wodę oraz śluzy, przez którą statki pokonują różnicę poziomów.",
-      "To miejsce na relację z wyjazdu – działanie zamknięć jazu, śluzowanie, przepławka dla ryb (jeśli występuje) i rola stopnia w mieście."
+      "Stopień Wodny Kościuszko oddano do użytku w 1990 roku. Leży w gminie Liszki, przy zachodniej granicy Krakowa, i jest jednym z elementów kaskady Górnej Wisły – powyżej znajduje się stopień Łączany, a poniżej stopień Dąbie.",
+      "W skład stopnia wchodzą: trójprzęsłowy jaz o przęsłach szerokości 32 m, śluza komorowa o długości 190 m i szerokości 12 m, zapora ziemna, sterownia, przepławka dla ryb oraz mała elektrownia wodna o mocy ok. 3 MW. Nad stopniem przebiega most zachodniej obwodnicy Krakowa w ciągu autostrady A4.",
+      "Tuż poniżej stopnia znajduje się krakowski tor kajakarstwa górskiego, a przez śluzę prowadzi trasa tramwaju wodnego z centrum Krakowa do Tyńca.",
+      "To miejsce na relację z wyjazdu: jak wyglądało zwiedzanie, co pokazał przewodnik (np. sterownię, zamknięcia jazu, śluzowanie, przepławkę), jakie pomiary i urządzenia udało się zobaczyć i co było najciekawsze z inżynierskiego punktu widzenia."
     ],
     parametry: {
-      "Elementy": "jaz, śluza komorowa",
       "Rzeka": "Wisła",
-      "Lokalizacja": "Kraków"
+      "Oddanie do użytku": "1990",
+      "Jaz": "3 przęsła × 32 m",
+      "Śluza (dł. × szer.)": "190 × 12 m",
+      "Spad": "4,4 m",
+      "Elektrownia wodna": "ok. 3 MW",
+      "Pozostałe elementy": "zapora ziemna, przepławka, sterownia"
     },
+    zrodla: [
+      { nazwa: "Wikipedia – Stopień Wodny Kościuszko", url: "https://pl.wikipedia.org/wiki/Stopie%C5%84_Wodny_Ko%C5%9Bciuszko" }
+    ],
     okladka: 0,
     zdjecia: [
-      { plik: "", opis: "Jaz – widok z brzegu" },
+      { plik: "", opis: "Jaz trójprzęsłowy – widok od strony wody dolnej" },
       { plik: "", opis: "Komora śluzy" },
+      { plik: "", opis: "Mała elektrownia wodna" },
+      { plik: "", opis: "Zamknięcia jazu z bliska" },
       { plik: "", opis: "Wrota śluzy" },
-      { plik: "", opis: "Sterownia" },
-      { plik: "", opis: "Wisła poniżej stopnia" }
+      { plik: "", opis: "Przepławka dla ryb" },
+      { plik: "", opis: "Most autostrady A4 nad stopniem wodnym" },
+      { plik: "", opis: "Tor kajakarstwa górskiego poniżej stopnia" }
     ]
   }
 ];

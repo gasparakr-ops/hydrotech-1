@@ -161,18 +161,13 @@
       (r.wspolrzedne ? '<button type="button" class="card__map" data-map="' + esc(r.id) + '">' + icon("pin") + "Na mapie</button>" : "") +
       "</div></div></article>";
   }
-  function plural(n) {
-    if (n === 1) return "fotoreportaż";
-    var d = n % 10, h = n % 100;
-    return d >= 2 && d <= 4 && (h < 12 || h > 14) ? "fotoreportaże" : "fotoreportaży";
-  }
   function render() {
     var list = filtered();
     grid.innerHTML = list.length ? list.map(card).join("") :
       '<div class="empty" style="grid-column:1/-1"><h3>Brak wyników</h3><p>Zmień filtr lub wpisz inną frazę.</p>' +
       '<button type="button" class="btn btn--outline btn--sm" id="reset">Pokaż wszystkie</button></div>';
-    infoEl.textContent = list.length === ALL.length ? "Wszystkie " + plural(ALL.length) + ": " + ALL.length :
-      "Znaleziono " + list.length + " z " + ALL.length;
+    infoEl.textContent = list.length === ALL.length ? "Fotoreportaże: " + ALL.length :
+      "Znaleziono: " + list.length + " z " + ALL.length;
     grid.querySelectorAll(".reveal").forEach(function (el, i) {
       setTimeout(function () { el.classList.add("is-visible"); }, 40 * i);
     });

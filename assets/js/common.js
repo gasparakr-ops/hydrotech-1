@@ -52,6 +52,12 @@
       return '<span class="badge" style="--c:' + esc(info.kolor) + '">' + esc(info.nazwa) + "</span>";
     }).join("") + "</div>";
   }
+  // Polska odmiana: plural(3, "zdjęcie", "zdjęcia", "zdjęć") -> "zdjęcia"
+  function plural(n, one, few, many) {
+    if (n === 1) return one;
+    var d = n % 10, h = n % 100;
+    return d >= 2 && d <= 4 && (h < 12 || h > 14) ? few : many;
+  }
   function byDateDesc(a, b) { return (b.data || "").localeCompare(a.data || ""); }
   function normalize(s) {
     return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ł/g, "l");
@@ -319,7 +325,7 @@
 
   window.HT = {
     CONFIG: CONFIG, TYPY: TYPY, REPORTAZE: REPORTAZE,
-    icon: icon, esc: esc, fmtDate: fmtDate, typ: typ, badges: badges, byDateDesc: byDateDesc, normalize: normalize,
+    icon: icon, esc: esc, plural: plural, fmtDate: fmtDate, typ: typ, badges: badges, byDateDesc: byDateDesc, normalize: normalize,
     findReportaz: findReportaz, photoSrc: photoSrc, photoType: photoType, coverIndex: coverIndex, imgTag: imgTag,
     placeholderSVG: placeholderSVG, createMap: createMap, markerIcon: markerIcon, popupHTML: popupHTML, initChrome: initChrome
   };

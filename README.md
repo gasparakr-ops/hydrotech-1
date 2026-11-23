@@ -21,10 +21,10 @@ Kolorystyka i krój pisma (Work Sans) nawiązują do stron Politechniki Krakowsk
 
 ```
 index.html            – strona główna
-reportaz.html         – szablon strony pojedynczego reportażu (reportaz.html?id=solina)
+reportaz.html         – szablon strony pojedynczego reportażu (reportaz.html?id=stopien-kosciuszko)
 data/config.js        – nazwa koła, e-mail, Facebook/Instagram, opiekun, opis
 data/reportaze.js     – WSZYSTKIE fotoreportaże (tu dodajesz nowe)
-zdjecia/<id>/         – zdjęcia reportażu (np. zdjecia/solina/01.jpg)
+zdjecia/<id>/         – zdjęcia reportażu (np. zdjecia/stopien-kosciuszko/01.jpg)
 assets/css/style.css  – wygląd strony
 assets/js/            – skrypty (filtry, mapa, galeria)
 assets/img/           – logo wydziału (kolorowe i białe), znak HYDROTECH, favicon
@@ -48,11 +48,13 @@ assets/vendor/leaflet – biblioteka map Leaflet (licencja BSD-2)
 
 Gdy pole `plik` jest puste albo pliku nie ma, strona pokazuje grafikę zastępczą z napisem „Miejsce na Twoje zdjęcie”.
 
-**Współrzędne:** w Google Maps kliknij prawym przyciskiem na obiekt i skopiuj liczby, np. `49.3953, 22.4547`.
+**Współrzędne:** w Google Maps kliknij prawym przyciskiem na obiekt i skopiuj liczby, np. `50.0308, 19.8192`.
+
+**Źródła:** w polu `zrodla` możesz podać, skąd pochodzą dane techniczne. Pojawią się pod tabelą parametrów.
 
 **Zdjęcia:** przed wrzuceniem zmniejsz je do ok. 2000 px szerokości (np. za darmo na [squoosh.app](https://squoosh.app)). Zdjęcie powinno ważyć 200–500 kB. Strona będzie się szybko ładować, a repozytorium nie przekroczy limitu GitHuba (zalecane do 1 GB, czyli kilka tysięcy zdjęć).
 
-> ⚠️ Sześć reportaży w `data/reportaze.js` to **przykłady**. Parametry techniczne podano poglądowo, więc przed publikacją sprawdź je w źródłach (zarządca obiektu, Wody Polskie) albo zastąp własnymi danymi.
+> ⚠️ Reportaż **Stopień Wodny Kościuszko** w `data/reportaze.js` jest **przykładowy**. Ma zmyśloną datę wyjazdu i grafiki zastępcze zamiast zdjęć. Dane techniczne pochodzą z Wikipedii (źródło jest podane na stronie reportażu). Uzupełnij go własną relacją i zdjęciami (folder `zdjecia/stopien-kosciuszko/`) albo użyj jako wzoru dla kolejnych wyjazdów.
 
 ## Podgląd na własnym komputerze
 

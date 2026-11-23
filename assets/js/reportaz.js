@@ -41,7 +41,7 @@
     (rep.data ? "<span>" + icon("calendar") + 'Wyjazd: <time datetime="' + esc(rep.data) + '">' + esc(HT.fmtDate(rep.data)) + "</time></span>" : "") +
     (rep.miejscowosc ? "<span>" + icon("pin") + esc([rep.miejscowosc, rep.wojewodztwo].filter(Boolean).join(", ")) + "</span>" : "") +
     (rep.rzeka ? "<span>" + icon("river") + "Rzeka: " + esc(rep.rzeka) + "</span>" : "") +
-    (photos.length ? "<span>" + icon("camera") + photos.length + " zdjęć</span>" : "") +
+    (photos.length ? "<span>" + icon("camera") + photos.length + " " + HT.plural(photos.length, "zdjęcie", "zdjęcia", "zdjęć") + "</span>" : "") +
     (rep.autorzy && rep.autorzy.length ? "<span>" + icon("user") + esc(rep.autorzy.join(", ")) + "</span>" : "") +
     "</div></div></section>";
 
@@ -54,7 +54,7 @@
   // Treść + panel boczny
   html += '<div class="container rbody"><article>';
   if (rep.demo && HT.CONFIG.pokazInfoDemo) {
-    html += '<div class="notice">' + icon("info") + "<p>To jest <strong>przykładowy</strong> fotoreportaż. Zastąp go własnym opisem i zdjęciami w pliku <code>data/reportaze.js</code>, a dane techniczne zweryfikuj ze źródłami.</p></div>";
+    html += '<div class="notice">' + icon("info") + "<p>To jest <strong>przykładowy</strong> fotoreportaż. Uzupełnij datę wyjazdu, relację i zdjęcia w pliku <code>data/reportaze.js</code>.</p></div>";
   }
   if (rep.lead) html += '<p class="rlead">' + esc(rep.lead) + "</p>";
   html += '<div class="rtext">' + (rep.tresc || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") + "</div>";
@@ -72,7 +72,15 @@
   if (paramKeys.length) {
     html += '<div class="panel"><h2>Parametry techniczne</h2><dl class="params">' + paramKeys.map(function (k) {
       return "<div><dt>" + esc(k) + "</dt><dd>" + esc(params[k]) + "</dd></div>";
-    }).join("") + "</dl>" + (rep.demo ? '<p class="panel__note">Dane poglądowe – do weryfikacji.</p>' : "") + "</div>";
+    }).join("") + "</dl>";
+    var zr = (rep.zrodla || []).filter(function (z) { return z && (z.nazwa || z.url); });
+    if (zr.length) {
+      html += '<p class="panel__note">Źródło: ' + zr.map(function (z) {
+        return z.url ? '<a href="' + esc(z.url) + '" target="_blank" rel="noopener">' + esc(z.nazwa || z.url) + "</a>" : esc(z.nazwa);
+      }).join(", ") + "</p>";
+    }
+    if (rep.demo) html += '<p class="panel__note">Dane przykładowe – potwierdź je u zarządcy obiektu.</p>';
+    html += "</div>";
   }
   if (rep.wspolrzedne) {
     html += '<div class="panel"><h2>Lokalizacja</h2><div class="map map--small" id="minimap" role="region" aria-label="Mapa lokalizacji obiektu"></div>' +
