@@ -27,7 +27,7 @@ data/reportaze.js     – WSZYSTKIE fotoreportaże (tu dodajesz nowe)
 zdjecia/<id>/         – zdjęcia reportażu (np. zdjecia/stopien-kosciuszko/01.jpg)
 assets/css/style.css  – wygląd strony
 assets/js/            – skrypty (filtry, mapa, galeria)
-assets/img/           – logo wydziału (kolorowe i białe), znak HYDROTECH, favicon
+assets/img/           – logo koła (logo-hydrotech.webp), logo wydziału (kolorowe i białe), favicon
 assets/vendor/leaflet – biblioteka map Leaflet (licencja BSD-2)
 ```
 
@@ -94,4 +94,4 @@ Każda zmiana wypchnięta na `main` aktualizuje stronę automatycznie.
 
 Pliki `assets/img/logo-wisie.svg` (kolorowe) i `assets/img/logo-wisie-biale.svg` (białe) pochodzą z oficjalnej strony wydziału ([wisie.pk.edu.pl](https://wisie.pk.edu.pl)).
 Używanie logo musi być zgodne z Systemem Identyfikacji Wizualnej PK, dlatego przed publikacją strony uzgodnij to z opiekunem koła lub z wydziałem.
-Znak HYDROTECH (`assets/img/hydrotech-znak.svg`) jest tymczasowy. Jeśli koło ma własne logo, podmień ten plik.
+Logo koła to `assets/img/logo-hydrotech.webp` (przycięte do koła), a favicon to `assets/img/favicon.png` i `assets/img/apple-touch-icon.png` (sam wir z logo). Jeśli zmienicie logo, podmień te pliki, zachowując ich nazwy.

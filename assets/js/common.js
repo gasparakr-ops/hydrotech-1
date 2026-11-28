@@ -295,6 +295,17 @@
       var v = CONFIG[el.dataset.config];
       if (v) el.textContent = v;
     });
+    // Opis koła (sekcja „O kole”)
+    document.querySelectorAll("[data-opis]").forEach(function (el) {
+      var opis = CONFIG.opis || [];
+      if (typeof opis === "string") opis = [opis];
+      var profil = CONFIG.instagram || CONFIG.facebook;
+      el.innerHTML = opis.map(function (p, i) {
+        var t = esc(p).replace(/ (\S+)$/, "\u00a0$1"); // ostatnie słowo/emotki nie zostają same w linii
+        if (profil) t = t.replace("nasz profil", '<a href="' + esc(profil) + '" target="_blank" rel="noopener">nasz profil</a>');
+        return "<p" + (i === 0 && opis.length > 1 ? ' class="about__intro"' : "") + ">" + t + "</p>";
+      }).join("");
+    });
     document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
     // Kontakt w stopce i w sekcji „Dołącz”
